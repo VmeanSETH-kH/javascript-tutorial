@@ -79,10 +79,195 @@
     <br>
     <h3>Regular Expression Patterns</h3>
     <p><b>Brackets</b> are used to find a range of characters</p>
+    <table>
+        <tr>
+            <th>Expression</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>[abc]</td>
+            <td>Find any of the characters between the brackets</td>
+        </tr>
+        <tr>
+            <td>[0-9]</td>
+            <td>Find any of the digits between the brackets</td>
+        </tr>
+        <tr>
+            <td>(x|y)</td>
+            <td>Find any of the alternatives separeted with |</td>
+        </tr>
+    </table>
+    <h3>Metacharacters are characters with a special meaning</h3>
+    <table>
+        <tr>
+            <th>Metacharacter</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>\d</td>
+            <td>Find a digit</td>
+        </tr>
+        <tr>
+            <td>\s</td>
+            <td>Find a whitespace character</td>
+        </tr>
+        <tr>
+            <td>\b</td>
+            <td>Find a match at the beginning of a word like this: <b>\bWORD</b>, or at the <br>
+            end of a word like this: <b>STRONG\b</b></td>
+        </tr>
+        <tr>
+            <td>\uxxx</td>
+            <td>Find the Unicode character specified by the hexadecimal number xxxx</td>
+        </tr>
+    </table>
+    <h3>Quantifier define quantities</h3>
+    <table>
+        <tr>
+            <th>Quantifier</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>n+</td>
+            <td>Matches any string that contains at least one <i>n</i></td>
+        </tr>
+        <tr>
+            <td>n*</td>
+            <td>Matches any string that contain zero or more occurences of <i>n</i></td>
+        </tr>
+        <tr>
+            <td>n?</td>
+            <td>Matches any string that contains zero or one occurences of <i>n</i></td>
+        </tr>
+    </table>
+    <h2>Using the RegExp Object</h2>
+    <div class="rounded-box">
+    <h3 style="color: white;">Example</h3>
+    <pre>
+    <code class="language-javascript">
+    const pattern = /e/;
+    // test()
+    pattern.test("The best things in life are free!"); // return true
+
+    // exec(): searches a string for a specified pattern, and returns the found test as an object.
+    /e/.exec("The best things in life are free!");
+
+    </code>
+    </pre>
+    </div>
 
     <br>
     <!-- ======================================== -->
     <h1>Precedence</h1>
+    <p class="favorite-background">
+        Operator precedence describes the order in which operations are performed in an arithmetic expression.
+        <br><br>
+        Multiplication (<span class="important">*</span>) and division (<span class="important">/</span>) have higher
+        <b>precedence</b> than addition (<span class="important">+</span>) and substraction (<span class="important">-</span>).
+    </p>
+    <div class="rounded-box" style="background-color: white;">
+        <h3 style="text-align: center;">Operator Precedence Values</h3>
+        <p style="text-align: center; color: black;">
+        Expression in parentheses are computed <b>before</b> the rest of the expression <br>
+        Function are executed <b>before</b> the result is used in the rest of the expression</p>
+        <table>
+            <tr>
+                <th>Val</th>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>( )</td>
+                <td>Expression Grouping</td>
+                <td>(1 + 1) / 10</td> 
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>.</td>
+                <td>Member of</td>
+                <td>person.name</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>[]</td>
+                <td>Member of</td>
+                <td>person["name"]</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>?.</td>
+                <td>Optional Chaining ES2020</td>
+                <td>x ?. y</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>()</td>
+                <td>Functrion Call</td>
+                <td>myFunc()</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>new</td>
+                <td>New with Arguments</td>
+                <td>new Date("April 4th, 2025")</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>new</td>
+                <td>New without Arguments</td>
+                <td>new Date()</td>
+            </tr>
+        </table>
+        <h3 style="text-align: center;">Increment Operators</h3>
+        <p style="text-align: center; color: black;">
+        Postfix increment are executed <b>before</b> prefix increments
+        </p>
+        <table>
+            <tr>
+                <td>15</td>
+                <td>++</td>
+                <td>Postfix Increment</td>
+                <td>i++</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>--</td>
+                <td>Postfix Decrement</td>
+                <td>i--</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>++</td>
+                <td>Prefix Increment</td>
+                <td>++i</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>--</td>
+                <td>prefix Decrement</td>
+                <td>--i</td>
+            </tr>
+        </table>
+        <h3 style="text-align: center;">NOT Operators</h3>
+        <table>
+            <tr>
+                <td>14</td>
+                <td>!</td>
+                <td>Logical NOT</td>
+                <td>!(x==y)</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>~</td>
+                <td>Bitwise NOT</td>
+                <td>~x</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
 
     <a href="https://www.w3schools.com/js/js_regexp.asp">Read More</a>
     <br><br>

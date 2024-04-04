@@ -8,19 +8,225 @@
     </header>
 
     <body class="container">
-    <h1>Errors</h1>
-    <h1>Scope</h1>
-    <h1>Hoisting</h1>
-    <h1>Strict Mode</h1>
-    <h1>this Keyword</h1>
-    <h1>Arrow Function</h1>
-    <h1>Classes</h1>
-    <h1>Modules</h1>
-    <h1>JSON</h1>
-    <h1>Debugging</h1>
-    <h1>Style Guide</h1>
-    <h1>Optional</h1>
+    <h1>Errors (optional)</h1>
+    <a href="https://www.w3schools.com/js/js_errors.asp">Read MORE</a>
+    <br>
 
+    <h1>Scope</h1>
+    <p class="favorite-background">
+        Scope determines the accessibility of variables. <br><br>
+        JavaScript variables have 3 types of scope:
+        <ul>
+            <li>Block scope <br>
+            <span class="important">let</span> and <span class="important">const</span> <br>
+            Variables declared inside a  <span class="important">{ }</span>
+            block cannot be accessed from outside the block.</li> 
+            <li>Function scope <br>
+            <span class="important">var</span>, <span class="important">let</span>, and <span class="important">const</span> <br></li>
+            <li>Global scope <br>
+            <span class="important">var</span>, <span class="important">let</span>, and <span class="important">const</span> <br></li>
+        </ul>
+    </p>
+    <a href="https://www.w3schools.com/js/js_scope.asp">Read MORE</a>
+    <br><br>
+
+    <h1>Hoisting (optional)</h1>
+    <hr>
+    <p>Hoisting is JavaScript's default behavior of moving declarations to the top
+        of the current scope (to the top of the current script or the current funcrtion).</p>
+    <hr> 
+    <h1>Strict Mode (optional)</h1>
+    <a href="https://www.w3schools.com/js/js_strict.asp">Read MORE</a>
+    <br><br>
+
+    <h1>this Keyword (optinal)</h1>
+    <a href="https://www.w3schools.com/js/js_this.asp">Read MORE</a>
+    <br><br>
+
+    <h1>Arrow Function</h1>
+    <p>Arrow funtions allow us to write shorter function syntax <br>
+        <span class="important" style="padding: 5px;">let myFunc = (a, b) => a * b;</span>
+    </p>
+    
+    <h1>Classes</h1>
+    <hr>
+    <p>JavaScript Classes are templates for JavaScript Objects.</p>
+    <hr>
+    <div class="rounded-box">
+    <h3 style="color: white;">Syntax & Example</h3>
+    <pre>
+    <code class="language-javascript">
+    // syntax
+    class ClassName {
+        constructor () { ... }
+    }
+
+    // Example
+    class Car {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+        }
+    }
+
+    const myCar1 = new Car("Ford", 2014);
+    const myCar2 = new Car("BMW", 2024);
+    </code>
+    </pre>
+    </div>
+
+    <p class="favorite-background">
+        The <span class="important">constructor</span> method is called automatically when
+        a new object is created
+    </p>
+    <hr>
+    <h3>Class Methods</h3>
+    <div class="rounded-box">
+    <h3 style="color: white;">Syntax & Example</h3>
+    <pre>
+    <code class="language-javascript">
+    // syntax
+    class ClassName {
+        constructor () { ... }
+        method1() { ... }
+        method2() { ... }
+        method3() { ... }
+    }
+
+    // Example
+    class Car {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+        }
+        age() {
+            const date = new Date();
+            return date.getFullYear() - this.year
+        }
+    }
+
+    const myCar = new Car("Ford", 2014);
+    document.getElementById("demo").innerHTML = "My car is" + 
+    myCar.age() + "years old."
+    </code>
+    </pre>
+    </div>
+    
+    <br><br>
+    <h1>Modules</h1>
+    <p class="favorite-background">
+        JavaScript modules allow you to break up your code into separate files.
+        This makes it easier to maintain a code-base. <br>
+        Module are imported from external files with <span class="important">import</span> 
+        statement. <br>
+        Modules also rely on <span class="important">type="module"</span> in the 
+        <span class="important">&lt;script&gt;</span> tag.
+    </p>
+    <div class="rounded-box">
+    <h3 style="color: white;">Example</h3>
+    <pre>
+    <code class="language-javascript">
+    &lt;script type="module"&gt;
+    import message from "./message.js";
+    &lt;/script&gt;
+    </code>
+    </pre>
+    </div>
+    <br>
+    <hr>
+    <h3>Export</h3>
+    <p>Modules with <b>functions</b> or <b>variables</b> can be stored in any external file. <br>
+        There are two types of exports:
+        <ul>
+            <li><b>Named Exports</b></li>
+            <li><b>Default Exports</b></li>
+        </ul>
+    </p>
+    <hr>
+    <a href="https://www.w3schools.com/js/js_modules.asp">Read MORE</a>
+    
+    <br><br>
+    <h1>JSON</h1>
+    <hr>
+    <b>JSON</b> is a format for storing and transporting data. <br>
+    <b>JSON</b> is often used when data is sent from a server to a web page.
+    <hr>
+    <div class="favorite-background">
+        <b>What is JSON?</b> <br>
+        <ul>
+            <li>JSON stands for <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation </li>
+            <li>JSON is a lightweight data interchange format</li>
+            <li>JSON is language independent *</li>
+            <li>JSON is "self-describing" and easy to understand</li>
+        </ul>
+        * The JSON syntax is derived from JS object notation syntax, but the JSON format
+        is <span class="important">text only</span>. Code for reading and generating 
+        <span class="important">JSON data can be written in any programming language</span>.
+    </div>
+    <h3>JSON Syntax Rules</h3>
+    <ul>
+        <li>Data is in name/value pairs</li>
+        <li>Data is separated by commas</li>
+        <li>Curly braces hold objectsxx</li>
+        <li>Square brackets hold arrays</li>
+    </ul>
+    
+    <div class="rounded-box">
+    <h3 style="color: white;">JSON Example</h3>
+    <pre>
+    <code class="language-javascript">
+    { // object
+        "employees": [ //array
+        {"firstName":"John", "lastName":"Doe"}, //object
+        {"firstName":"Nikola", "lastName":"Tesla"},
+        {"firstName":"Albert", "lastName":"Einstein"},
+    ]
+    }
+
+    /*
+    In this example, the object "employees" is an array. It contain three objects. 
+    Each object is a record of a person (with a first name and last name).
+    */
+    </code>
+    </pre>
+    </div>
+    <br>
+    <a href="https://www.w3schools.com/js/js_json.asp">Read MORE</a>
+
+    <h1>Debugging</h1>
+    <div class="favorite-background">
+        <h3>How to debug JavaScript ?</h3>
+        <ul>
+            <li>Use <span class="important">console.log()</span> method <br>
+                <b>Recommend</b>: the most easiest way to debug JS code</li> 
+            <li>Setting Breakpoints <br>
+                The <span class="important">debugger</span> keyword stops the execution
+                of JS, and calls (if available) the debugging function.
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <hr>
+    <div style="background-color: white; padding:5px;">
+        <p>
+            Debugging is the process of testing, finding, and reducing bugs (errors) in
+            computer programs. <br>
+            The first known <b>computer bug</b> was a real bug (insect) stuck in the electronics.
+        </p>
+    </div>
+    <hr>
+    <a href="https://www.w3schools.com/js/js_debugging.asp">Read more</a>
+    <br><br>
+
+    <h1>Style Guide (optional)</h1>
+    <a href="https://www.w3schools.com/js/js_conventions.asp">Read more</a>
+    <br><br>
+
+    <h1>Optional</h1>
+    <a href="https://www.w3schools.com/js/js_best_practices.asp">Read more</a>
+    
     <br><br>
     <p>
         <a href="17_regExpPrecedence.html"><span class="left-aligned"> PREVIOUS </span></a>
