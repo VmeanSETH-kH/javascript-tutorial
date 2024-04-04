@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">  
+
+        <link rel="stylesheet" href="css/prism.css" />  
+        <script src="js/script/prism.js"></script>
+    </header>
+
+    <body class="container">
+    <h1>Regular Expressions</h1>
+    <p class="favorite-background"">
+        A <b>regular expression</b> is a sequence of characters that forms a <b>search pattern</b>.
+        <br>
+        The <b>search pattern</b> can be used for <b>text search</b> and <b>text replace</b> operations.
+    </p>
+
+    <div class="rounded-box">
+    <h3 style="color: white;">Syntax</h3>
+    <pre><code class="language-javascript">
+        /pattern/modifiers;
+
+    </code></pre>
+    <h3 style="color: white;">Example</h3>
+    <pre>
+    <code class="language-javascript"></code>
+        /nikolaTesla/i;
+    </pre>
+    </div>
+    <p>
+        Example explained: 
+        <ul>
+            <li><b>/nikolaTesla/i</b> is a regular expression. </li>
+            <li><b>nikolaTesla</b> is a pattern (to be used in a search). </li>
+            <li><b>i</b> is a modifier (modifies the search to be case-sensitive)</li>
+        </ul>
+        <hr>
+    </p>
+
+    <h3>Using String search() with a Regular Expression</h3>
+    <div class="rounded-box">
+    <h3 style="color: white;">Example</h3>
+    <pre>
+    <code class="language-javascript">
+        let text = "Hi, Nikola";
+        let n = text.search(/Nikola/i);     // n = 4
+
+        let str = "Nikola Eistein !!"
+        let result = text.replacec(/Nikola/i, "Albert"); 
+        // result = "Albert Eistein !!"
+    </code>
+    </pre>
+    </div>
+
+    <h3>Regular Expression modifiers</h3>
+    <p><b>Modifiers</b> can be used to perform case-sensitive more global searches:</p>
+    <table>
+        <tr>
+            <th>Modifier</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>i</td>
+            <td>Perform case-insensitive matching</td>
+        </tr>
+        <tr>
+            <td>g</td>
+            <td>Perform a global match (find all)</td>
+        </tr>
+        <tr>
+            <td>m</td>
+            <td>Perform multiline matching</td>
+        </tr>
+        <tr>
+            <td>d</td>
+            <td>Perform start and end matching </td>
+        </tr>
+    </table>
+    <br>
+    <h3>Regular Expression Patterns</h3>
+    <p><b>Brackets</b> are used to find a range of characters</p>
+
+    <br>
+    <!-- ======================================== -->
+    <h1>Precedence</h1>
+
+    <a href="https://www.w3schools.com/js/js_regexp.asp">Read More</a>
+    <br><br>
+    <p>
+        <a href="16_bitwise.html"><span class="left-aligned"> PREVIOUS </span></a>
+        <a href="18_plusAlpha.html" class="right-aligned"> NEXT</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>

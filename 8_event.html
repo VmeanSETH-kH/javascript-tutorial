@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">  
+
+        <link rel="stylesheet" href="css/prism.css" />  
+        <script src="js/script/prism.js"></script>
+    </header>
+
+    <body class="container">
+    <h1>JS Events</h1>
+    
+    <br>
+    <hr>
+    <ul>
+        <li>HTML events are <b>"things"</b> that happen to HTML elements.</li>
+        <li>When JS is used in HTML pages, JS can <b>"react"</b> on these events.</li>
+    </ul>    
+    <hr>
+    <br>
+    <table>
+        <tr><th>Here are some examples of HTML events</th></tr>
+        <tr><td>An HTML web page has finished loading</td></tr>
+        <tr><td>An HTML input field was changed</td></tr>
+        <tr><td>An HTML button was clicked</td></tr>
+    </table>
+
+    <br>
+    <table>
+        <tr><th>HTML allows event handler attributes, <b>with JS code</b>, to be added to HTML elements</th></tr>
+        <tr>
+        <td><pre><code class="language-javascript">
+        // syntax:
+        &lt;event event="some JS code"&gt;
+
+        // Example
+        &lt;button onclick= "document.getElementById('demo').innerHTML = 
+        Date()"&gt;The time is?&lt;/button&gt;
+        </code></pre></td>
+            
+
+        </tr>
+    </table>
+
+    <br>
+    <h2>Common HTML Events</h2>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>onclick</td>
+            <td>The user clicks an HTML element</td>
+        </tr>
+        <tr>
+            <td>onchange</td>
+            <td>An HTML element has been changed</td>
+        </tr>
+        <tr>
+            <td>onmouseover</td>
+            <td>The user moves the mousse over an HTML element</td>
+        </tr>
+        <tr>
+            <td>onmouseout</td>
+            <td>The user moves the mouse away form an HTML element</td>
+        </tr>
+        <tr>
+            <td>onkeydown</td>
+            <td>The user pushes a keyboard key</td>
+        </tr>
+        <tr>
+            <td>onload</td>
+            <td>The browser has finished loading the page</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <p>
+        <a href="7_object.html"><span class="left-aligned"> BACK </span></a>
+        <a href="9_string.html" class="right-aligned"> NEXT page</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>

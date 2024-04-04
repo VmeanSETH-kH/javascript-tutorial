@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">  
+
+        <link rel="stylesheet" href="css/prism.css" />  
+        <script src="js/script/prism.js"></script>
+    </header>
+
+    <body class="container">
+    <h1>JS Objects</h1>
+    
+    <div class="rounded-box">
+    <h3 style="color: white;"> Example code</h3>
+    <pre>
+    <code class="language-javascript">
+        // Create an object
+        const person = {
+            firstName: "Nikola",
+            lastName: "Tesla",
+            id: 1122,
+            fullName: function() { //fullName here is a function
+                return this.firstName + " " + this.lastName;
+                // &lt;this&gt; refers to the &lt;person&gt; object
+            }
+        }
+
+        // Accessing Object methods
+        person.fullName();  // syntax : objectName.methodName()
+                            // Returns "Nikola Tesla"
+        
+    </code>
+    </pre>   
+    </div>
+
+    <br><br>
+    <p>
+        <a href="6_func.html"><span class="left-aligned"> BACK </span></a>
+        <a href="8_event.html" class="right-aligned"> NEXT page</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>

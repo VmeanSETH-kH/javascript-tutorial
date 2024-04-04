@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">
+    </header>
+    <body><div class="container">
+        <h1>JavaScript Tutorials</h1>
+
+        <!-- change HTML content -->
+        <br>
+        <p>---</p>
+        <h3 id="demo0"> JS can change HTML content.</h3>
+        <button type="button" onclick='document.getElementById("demo0").innerHTML="HTML content after button click"'>Change HTML content</button>
+
+        <p>---</p>
+        <h3> (JS) can change HTML attribute values.</h2>
+
+        <!-- change HTML attribute values-->
+        <button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on the light</button>
+
+        <img id="myImage" src="images/pic_bulboff.gif" style="width:100px">
+
+        <button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off the light</button>
+
+        <!-- Change Style -->
+        <p>---</p>
+        <h3 id="demo1"> JS can change Style of an HTML element</h3>
+        <button type="button" onclick="document.getElementById('demo1').style.fontSize='35px'">Change Font Size!</button>
+        <button type="button" onclick="document.getElementById('demo1').style.color='red'">Change Text Color</button>
+        
+        <!-- Hide & Show HTML Elements -->
+        <p>---</p>
+        <h3 id="demo2">JS can hide and show HTML Elements</h3>
+        <button type="button" onclick="document.getElementById('demo2').style.display='none'">Hide</button>
+        <button type="button" onclick="document.getElementById('demo2').style.display='block'">Show</button>
+
+        <br><br>
+        <p>
+            <a href="0_index.html"><span class="left-aligned"> BACK </span></a>
+            <a href="1_whereTo.html" class="right-aligned"> NEXT page</a>
+        </p>
+        
+        <footer id="main-footer">
+            <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+        </footer>
+        <div style="margin-bottom: 30px ;"></div>
+    </div></body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">  
+
+        <link rel="stylesheet" href="css/prism.css" />  
+        <script src="js/script/prism.js"></script>
+    </header>
+
+    <body class="container">
+    <h1>JS Math</h1>
+    <p style="background-color: orange; padding: 30px;"> 
+        The JavaScript Math object allows you to perform mathematical tasks on numbers.
+    </p>
+    <hr>
+    <h3>The Math Object</h3>
+    <ul>
+        <li>The Math object has no constructor</li>
+        <li>The Math obeject is static</li>
+        <li>All methods and properties can be used without creating a Math object firsts</li>
+    </ul>
+    <hr>
+    <h3>Math Properites (Constants)</h3>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    /* SYNTAX
+    Math.property
+    */
+
+    Math.E       // returns Euler's number
+    Math.PI      // returns PI
+    Math.SQRT2  // returns square root of 2
+    Math.SQRT1_2 // returns square root of 1/2
+    Math.LN2    // returns the natural logarithm of 2
+    Math.LN10   // returns the natural logarithm of 10
+    Math.LOG2E  // returns base 2 logarithm of E
+    Math.LOG10E // returns base 10 logarithm of E
+    </code>
+    </pre>
+    </div>
+    <hr>
+    <h3>Math Methods</h3>
+    <p>Syntax: <span style="background-color: white; color: orange;">
+    Math.method(number)
+    </span>
+    </p>
+    <hr>
+    <h3>Number to Inrteger</h3>
+    <table>
+        <tr>
+            <td>Math.round(x)</td>
+            <td>Returns x rounded to its nearest integer</td>
+        </tr>
+        <tr>
+            <td>Math.ceil(x)</td>
+            <td>Returns x rounded up to its nearest integer</td>
+        </tr>
+        <tr>
+            <td>Math.floor(x)</td>
+            <td>Returns x rounded down to its nearest integer</td>
+        </tr>
+        <tr>
+            <td>Math.trunc(x)</td>
+            <td>Returns the integer part of x</td>
+        </tr>
+    </table>
+    <hr>
+    <div class="rounded-box">
+    <h3 style="color: white;">Example</h3>
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    Math.sign(-4);  // returns -1
+    Math.sign(0);   // returns 0
+    Math.sign(4);   // returns 1
+
+    Math.pow(8,2);  // returns 8^2 = 64
+
+    Math.sqrt(64);  // return 8
+
+    Math.abs(-9.9); // return |-9.9| = 9.9
+
+    Math.sin(90 * Math.PI / 180);   // return 1 (the sine of 90 degrees)
+    // Math.cos(rad)
+    
+
+    Math.min(0, 179, 20, 70);   // return 0
+    Math.max(0, 179, 20, 70);   // return 179
+
+    Math.random();              // return a random number between 0 ,and 1
+
+    Math.log(Math.E);            // return ln(e) = 1
+    Math.log2(8);               // return log2(8) = 3
+    Math.log10(100);            // return 2
+    </code>
+    </pre>
+    </div>
+    <h3 style="text-align: center;">JS Math Methods</h3>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>abs(x)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>acos(x)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>acosh(x)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>asin(x)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>asinh(x)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>atan(x)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>atanh(x)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>cbrt(x)</td>
+            <td>returns the cubic root of x</td>
+        </tr>
+        <tr>
+            <td>exp(x)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>floor(x)</td>
+            <td>returns x, rounded downwards to the nearest integer</td>
+        </tr>
+        <tr>
+            <td>ceil(x)</td>
+            <td>returns x, rounded upwards to the nearest integer</td>
+        </tr>
+        <tr>
+            <td>...</td>
+            <td>...</td>
+        </tr>
+    </table>
+
+    <br>
+    <h1>JS Random (Optional)</h1>
+
+    <br>
+    <h1>Booleans</h1>
+    <p style="background-color: orange; padding: 30px; ">
+        A JS Boolean represents one of two value: <b>true</b> or <b>false</b>
+    </p>
+
+    <br>
+    <h1>Comparisons</h1>
+    <h3>Comparison Operators</h3>
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>equal to</td>
+        </tr>
+        <tr>
+            <td>===</td>
+            <td>equal value and equal type</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>not equal</td>
+        </tr>
+        <tr>
+            <td>!==</td>
+            <td>not equal value or not equal type</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <h3> Logical Operator</h3>
+        <tr>
+            <th>Operator</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&&</td>
+            <td>AND</td>
+        </tr>
+        <tr>
+            <td>||</td>
+            <td>OR</td>
+        </tr>
+        <tr>
+            <td>!</td>
+            <td>NOT</td>
+        </tr>
+    </table>
+    <br>
+    <div class="rounded-box">
+    <h3 style="color: white;">Conditoinal (Ternary) Operator</h3>
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    let voteable = (age < 18) ? "Too young":"Old enough";
+    </code>
+    </pre>
+    </div>
+
+    <br>
+    <hr>
+    <div class="rounded-box">
+    <h3 style="color: white;">The Nullish Coalescing Operator (??)</h3>
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    /* The <span style="background-color: white; color: orange;">??</span> 
+    operator returns the first argument if it is not <b>nullish</b> (<span class="important">null</span>
+    or <span class="important">undefined</span> ) <br>
+    Otherwise, it returns the second argument
+    */
+
+    let name = null;
+    let text = "missing";
+    let result = name ?? text;  // result = "mssing"
+    </code>
+    </pre>
+    </div>
+    <br>
+    <a href="https://www.w3schools.com/js/js_math.asp">Read More</a>
+
+    <br><br>
+    <p>
+        <a href="11_array.html"><span class="left-aligned"> PREVIOUS </span></a>
+        <a href="13_ifSwitchForWhile.html" class="right-aligned"> NEXT</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <!-- IMPORT FILES -->
+    <header>
+        <link rel="stylesheet" href="css/style.css">  
+
+        <link rel="stylesheet" href="css/prism.css" />  
+        <script src="js/script/prism.js"></script>
+    </header>
+
+    <body class="container">
+    <h1>Sets (集合)</h1>
+    <p class="favorite-background">
+        A JS <b>Set</b> is a collection of unique values.
+        <br>
+        Each value can only occur once in a <b>Set</b>.
+    </p>
+    <h3>Essential Set Methods</h3>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>new Set()</td>
+            <td>Create a new Set</td>
+        </tr>
+        <tr>
+            <td>add()</td>
+            <td>Adds a new element to the Set</td>
+        </tr>
+        <tr>
+            <td>delete()</td>
+            <td>Removes an element from a Set</td>
+        </tr>
+        <tr>
+            <td>has()</td>
+            <td>Returns <b>true</b> if a value exists in the Set</td>
+        </tr>
+        <tr>
+            <td>forEach()</td>
+            <td>Invokes a callback for each element in the <b>Set</b></td>
+        </tr>
+        <tr>
+            <td>values()</td>
+            <td>Returns an iterator with all the values in a Set</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <th>Propertt</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>Returns the number of elements in a <b>Set</b></td>
+        </tr>
+        
+    </table>
+    <br>
+    <table>
+        <h3>Differences between Set and Array</h3>
+        <tr>
+            <th>Feature</th>
+            <th>Array</th>
+            <th>Set</th>
+        </tr>
+        <tr>
+            <td>Purpose</td>
+            <td>Ordered list of items</td>
+            <td>Collection of unique items</td>
+        </tr>
+        <tr>
+            <td>Order</td>
+            <td>Maintains order of elements</td>
+            <td>Unordered</td>
+        </tr>
+        <tr>
+            <td>Access</td>
+            <td>By index (e.g. myArray[0])</td>
+            <td>By Value (e.g. mySet.has())</td>
+        </tr>
+        <tr>
+            <td>Duplicates</td>
+            <td>Allowed</td>
+            <td>Not allowed</td>
+        </tr>
+    </table>
+
+    <!-- =============================================== -->
+    <br>
+    <h1>Maps</h1>
+    <p style="background-color: orange; padding: 30px;">
+        A <b>Map</b> holds key-value pairs where the keys can be any data type 
+        <br>
+        A Map remembers the original insertion order of the keys.
+    </p>
+    <h3>Essential Map Methods</h3>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>new Map()</td>
+            <td>Creates a new Map</td>
+        </tr>
+        <tr>
+            <td>set()</td>
+            <td>Sets the value for a key in a Map</td>
+        </tr>
+        <tr>
+            <td>get()</td>
+            <td>Gets the value for a key in a Map</td>
+        </tr>
+        <tr>
+            <td>entries()</td>
+            <td>Returns an iterator with the [key, value] pairs in a Map</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <h3>Differences between Objects and Maps</h3>
+        <tr>
+            <th></th>
+            <th>Object</th>
+            <th>Map</th>
+        </tr>
+        <tr>
+            <td>Iterable</td>
+            <td>Not directly iterable</td>
+            <td>Directly iterable</td>
+        </tr>
+        <tr>
+            <td>Size</td>
+            <td>Do not have a size property</td>
+            <td>Have a size property</td>
+        </tr>
+        <tr>
+            <td>Key Types</td>
+            <td>Keys must be Strings (or Symbols)</td>
+            <td>Keys can be any datatype</td>
+        </tr>
+        <tr>
+            <td>Key Order</td>
+            <td>Keys are not well ordered</td>
+            <td>Keys are ordered by insertion</td>
+        </tr>
+        <tr>
+            <td>Defaults</td>
+            <td>Have default keys</td>
+            <td>Do not have default keys</td>
+        </tr>
+    </table>
+
+    <br>
+    <a href="https://www.w3schools.com/js/js_sets.asp">Read More</a>
+    <br><br>
+    <p>
+        <a href="13_ifSwitchForWhile.html"><span class="left-aligned"> PREVIOUS </span></a>
+        <a href="15_typeConversion.html" class="right-aligned"> NEXT</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>

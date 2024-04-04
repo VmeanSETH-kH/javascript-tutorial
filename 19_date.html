@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">  
+
+        <link rel="stylesheet" href="css/prism.css" />  
+        <script src="js/script/prism.js"></script>
+    </header>
+
+    <body class="container">
+    <h1>Dates</h1>
+    <h3 style="text-align: center;">Set Date Methods</h3>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>setDate()</td>
+            <td>Set the day as number (1-31)</td>
+        </tr>
+        <tr>
+            <td>setFullYear()</td>
+            <td>Set the year (optionally month and day)</td>
+        </tr>
+        <tr>
+            <td>setHours()</td>
+            <td>Set the hour (0-23)</td>
+        </tr>
+        <tr>
+            <td>setMilliseconds()</td>
+            <td>Set the milliseconds (0-999)</td>
+        </tr>
+        <tr> 
+            <td>setMinutes()</td>
+            <td>Set the minutes (0-59)</td>
+        </tr>
+        <tr>
+            <td>setMonth()</td>
+            <td>Set the month (0-11)</td>
+        </tr>
+        <tr>
+            <td>setSeconds()</td>
+            <td>Set the seconds (0-59)</td>
+        </tr>
+        <tr>
+            <td>setTime()</td>
+            <td>Set the time (milliseconds since January 1, 1970)</td>
+        </tr>
+    </table>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    const d = new Date(); // make a new Date object
+    d.setFullYear(2024);
+    // d.setFullYear (2024, 12, 30);
+
+    </code>
+    </pre>
+    </div>
+    <a href="https://www.w3schools.com/js/js_dates.asp">Read More</a>
+    <h1>Date Formats</h1>
+    <a href="https://www.w3schools.com/js/js_date_formats.asp">Read More</a>
+    <h1>Date Get Methods</h1>
+    <h3>The <b>new Date</b> Constructor</h3>
+    In JS, date objects are created with <span style="background-color: white; color: orange;">new Date()</span>
+    <span style="background-color: white; color: orange;">new Date()</span> returns a date
+    object with the current date and time
+    <div class="rounded-box">
+    <h3 style="color: white;">Get the Current Time</h3>
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    const date = new Date();
+    </code>
+    </pre>
+    </div>
+    <h3 style="text-align: center;">Date Get Methods</h3>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>getFullYear()</td>
+            <td>Get <b>year</b> as a four digit number (yyyy)</td>
+        </tr>
+        <tr>
+            <td>getMonth()</td>
+            <td>get <b>month</b> as a number (0-11)</td>
+        </tr>
+        <tr>
+            <td>getDate()</td>
+            <td>Get day as a number (1-32)</td>
+        </tr>
+        <tr>
+            <td>getDay()</td>
+            <td>Get Weekday as a number (0-16)</td>
+        </tr>
+        <tr>
+            <td>getTime()</td>
+            <td>Get <b>time</b> (milliseconds since January 1, 1970)</td>
+        </tr>
+        <tr>
+            <td>Date.now()</td>
+            <td>Return the current date/time in milliseconds since January 1, 1970.</td>
+        </tr>
+    </table>
+    <br>
+    <a href="https://www.w3schools.com/js/js_date_methods.asp">Read More</a>
+    <h1>Date Set Methods</h1>
+    <a href="https://www.w3schools.com/js/js_date_methods_set.asp">Read More</a>
+
+    <br><br>
+    <p>
+        <a href="18_plusAlpha.html"><span class="left-aligned"> PREVIOUS </span></a>
+        <a href="" class="right-aligned"> NEXT</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>

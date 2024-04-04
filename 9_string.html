@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">  
+
+        <link rel="stylesheet" href="css/prism.css" />  
+        <script src="js/script/prism.js"></script>
+    </header>
+
+    <body class="container">
+    <h1>JS Strings</h1>
+    <br>
+    <div style="background-color: orange;">
+        <ul>
+            <li><b>Strings</b> are for <b>storing text</b></li>
+            <li><b>Strings</b> are written <b>with quotes</b></li>
+        </ul>
+    </div>
+    <h3 style="text-align: center;">Escape Characters ( \ )</h3>
+    <table>
+        <tr>
+            <th>Code</th>
+            <th>Result</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>\'</td>
+            <td>'</td>
+            <td>Single quote</td>
+        </tr>
+        <tr>
+            <td>\"</td>
+            <td>"</td>
+            <td>Double quote</td>
+        </tr>
+        <tr>
+            <td>\\</td>
+            <td>\</td>
+            <td>Backslash</td>
+        </tr>
+        <tr>
+            <td>\b</td>
+            <td>Backspace</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>\f</td>
+            <td>Form Feed</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>\n</td>
+            <td>New Line</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>\r</td>
+            <td>Carriage Return</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>\t</td>
+            <td>Hirizontal Tabulator</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>\v</td>
+            <td>Verical Tabulator</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <br>
+    <h2>Breaking Long Lines</h2>
+    <ul><li>A safe way to break up a <b>string</b> is by using string addition</li></ul>
+    <div class="rounded-box">
+    <pre>
+    <code class="language-javascript">
+        document.getElementById("demo").innerHTML = "Hello" +
+        "Dolly";
+    </code>
+    </pre>
+    </div>
+
+    <br>
+    <h2>Template Strings</h2>
+    <p id="demo"></p>
+    <div class="rounded-box">
+    <pre>
+    <code class="language-javascript">
+        let animal = "dog";
+        let text = `I like both cat and ${animal}`; 
+        // text = `I like both cat and dog`
+
+        document.getElementById("demo").innerHTML = text;
+    </code>
+    </pre>
+    </div>
+
+    <br>
+    <h2>String Methods</h2>
+
+    <!-- ======== CODE BLOCK ========================= -->
+    <div class="rounded-box">
+    <h3 style="color: white;">Sample Code and Explanation</h3>
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    // String Length
+    let text = "ABCDEFGHI";
+    let length = text.length;
+
+    // Extracting String Characters
+    // charAt(position) : returns the character
+    let text = "HELLO WORLD";
+    let char = text.charAt(0); // Returns H
+    // charCodeAt(position) : return the unicode of the character
+    let char = text.charCodeAt(0); //Returns 
+    // at(position) : returns the character 
+    const name = "Nikola Tesla";
+    let letter = name.at(2); // Return k
+    let character = name[2]; // Return k
+
+    //Extracting String Parts
+    // slice(start, end): extract a part of a string 
+    and returns the extracted in a new string 
+    let text = "Apple, Banana, Kiwi";
+    let part = text.slice(7, 13); // Returns Banana
+    // substring(start, end) : start and end values less than 0 
+    // are treated as 0
+    // substr(start, length): the second parameter specifies the 
+    // length of the extracted part
+    let str = "Apple, Banana, Kiwi";
+    let part = str.substr(7, 6); // Returns Banana
+
+    // Converting to Upper and Lower Case
+    let text1 = "Hello World!";
+    let text2 = text1.toUpperCase();
+    let text3 = text1.toLowerCase();
+
+    // String concat()
+    let text1 = "Hello";
+    let text2 = "World";
+    let concat_text = text1.concat(" ", text2); // Returns "Hello World"
+    // or
+    let concat_text = text1 + " " + text2; // Recommend
+
+    // trim(): removes whites space from both sides of a string
+    let text1 = "     Hello World!    "
+    let text2 = text1.trim();           // Returns "Hello World!"
+    let text3 = text1.trimStart();      // Return "Hello World!    "
+    let text4 = text1.trimEnd();        // Return "     Hello World!"
+
+    // Padding
+    let num = 5;
+    let text = num.toString(); // convert a number to a string
+    let str_length = 4;
+    let padding_str = "x";
+    let padded = text.padStart(str_length, padding_str); 
+    // Returns "xxx5"
+    let padded = text.padEnd(str_length, padding_str);
+    // Returns "5xxx"
+
+    // repeat()
+    let string = "S";
+    let count = 2;
+    let result =  string.repeat(count); // Returns "SS"   
+    
+    // replace()
+    let text = "Please visit Microsoft"
+    let newText = text.replace("Microsoft", "Google Docs");
+    // Returns "Please visit Google Docs"
+
+    // split()
+    let text = "Hi | my name is Tesla, I'm from ...,"
+    let str1 = text.split(","); // Split on commas
+    let str2 = text.split(" "); // Split on spaces
+    let str3 = text.split("|"); // Split on pipe
+    </code>
+    </pre>
+    </div>
+    <!-- ============ END of CODE =====================  -->
+
+    <h3> String Search Methods</h3>
+    <ul>
+        <li>indexOf()</li>
+        <li>lastIndexOf()</li>
+        <li>search()</li>
+        <br>
+        <li>match()</li>
+        <li>matchAll()</li>
+        <li>includes() <br>returns <b>true</b> or <b>false</b></li>
+        <li>startsdWith() <br> returns <b>true</b> or <b>false</b></li>
+        <li>endsWith() <br> returns <b>true</b> or <b>false</b></li>
+    </ul>
+    <a href="https://www.w3schools.com/js/js_string_search.asp#mark_indexof">Read More</a>
+    <h3> Template String</h3>
+    <a href="https://www.w3schools.com/js/js_string_templates.asp">Read More</a>
+    
+
+    <br><br>
+    <p>
+        <a href="8_event.html"><span class="left-aligned"> PREVIOUS </span></a>
+        <a href="10_number.html" class="right-aligned"> NEXT</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>

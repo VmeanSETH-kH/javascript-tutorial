@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">
+    </header>
+
+    <body class="container">
+    <h1>JS Output </h1>
+    
+    <p>---</p>
+    <h2> Writing into an HTML element, using
+        innerHTML
+    </h2>
+    <p id="demo"></p>
+    <script>
+    document.getElementById("demo").innerHTML = 100*2;
+    </script>
+
+    <!-- use for testing -->
+    <p>---</p>
+    <h2>Writing into the HTML output using 
+        document.write
+    </h2>
+    <script>
+        document.write("Welcome to my Static Web Site : 5+6=")
+        document.write(5 + 6);
+    </script>
+
+    <!-- use an alert box to display data -->
+    <p>---</p>
+    <h2>Writing into an alert box, using console.log</h2>
+    <!-- <script>
+        // window.alert(5 + 6);
+        alert("alert box");
+    </script> -->
+
+    <p>---</p>
+    <h2>JS Print method: window.print()</h2>
+    <button class="background-pink" onclick="window.print()">Print this Page</button>
+
+
+    <br><br>
+    <p>
+        <a href="1_whereTo.html"><span class="left-aligned"> BACK </span></a>
+        <a href="3_statement.html" class="right-aligned"> NEXT page</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/script/myScript1.js"></script> 
+        <script src="js/script/myScript2.js"></script> 
+
+        <script>
+            document.getElementById("demo").innerHTML = "My First JS"
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Paragraph Changed.";
+                document.getElementById("demo").style.color="red";
+            }
+        </script>
+    </header>
+
+    <body><div class="container">
+        <h1> Where To</h1>
+
+        <p>---</p>
+        <h3> JS in script Tag </h3>
+        <p id="demo"> A Paragraph</p>
+        <button type="button" onclick="myFunction()"> Try it</button>
+        
+        <p>---</p>
+        <h3> External JS</h3>
+        <p id="demo2"> Original Text</p>
+        <button type="button" onclick="myFunction1()">Red</button>
+        <button type="button" onclick="myFunction2()">Blue</button>
+        
+        <br><br>
+        <p>
+            <a href="0_index.html"><span class="left-aligned"> BACK </span></a>
+            <a href="2_output.html" class="right-aligned"> NEXT page</a>
+        </p>
+        <footer id="main-footer">
+            <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+        </footer>
+        <div style="margin-bottom: 30px ;"></div>
+    </div></body>
+</html>

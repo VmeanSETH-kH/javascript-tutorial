@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">  
+
+        <link rel="stylesheet" href="css/prism.css" />  
+        <script src="js/script/prism.js"></script>
+    </header>
+
+    <body class="container">
+    <h1>Arrays</h1>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    /* Syntax
+
+    const array_name = [item1, item2, ...];
+
+    */
+    
+    const car = ["Toyota", "Nissan", "BMW"];
+    car.length      // Property: returns the number of elements
+    car.sort()      // Method: Sorts the array
+
+    const fruits = ["Banana", "Orange", "Apple"];
+    fruit.push("Lemon");    // Adds a new element (Lemon) to fruits
+
+    fruits[6] = "Papaya";   // Creates undefined "holes" in fruits
+    </code>    
+    </pre>    
+    </div>
+    
+    <h3>What is the difference between Arrays and Objects?</h3>
+    <ul>
+        <li><b>Arrays</b> use <b>numbered indexes</b><br>
+            You should use <b>arrays</b> when you want the element names to be <b>numbers</b><div class=""></div>
+        </li>
+        <li><b>Obects</b> use <b>named indexes</b><br>
+            You should use <b>objects</b> when you want the element names to be <b>strings (text)</b>.
+        </li>
+    </ul>
+    
+    <br><br>
+    <p>---</p>
+    <h1>Array Methods</h1>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let size = fruits.length;   // Return 4
+
+    let fruits_str = fruits.toString(); // Returns Banana,Orange,Apple,Mango
+    /* 
+    fruits_str = fruits.join(" * ");  
+    Result: Banana * Orange * Apple * Mango
+    */
+
+    let fruit = fruits.at(2);          // Returns Apple
+    // let fruit = fruits[2];
+
+    fruits.pop();           // fruits = ["Banana", "Orange", "Apple"]
+    fruits.push("Kiwi");    // fruits = ["Banana", "Orange", "Apple", "Kiwi"]
+
+    fruits.shift();         // fruits = ["Orange", "Apple", "Kiwi"]
+    fruits.unshift("Lemon"); // fruits = ["Lemon", "Orange", "Apple", "Kiwi"]
+
+    fruits[0] = "Banana"; // fruits = ["Banana", "Lemon", "Orange", "Apple", "Kiwi"]
+
+    delete fruits[0];       // fruits = [undefined, "Lemon", "Orange", "Apple", "Kiwi"]
+
+    // Merging Arrays (Concatenating)
+    const myGirls = ["Cecilie", "Lone"];
+    const myBoy1 = ["Nikola"];
+    const myBoy2 = ["Einstein"];
+    const myChildren = myGirls.concat(myBoy1, myBoy2); 
+    // myChildren = ["Cecilie", "Lone", "Nikola", "Einstein"];
+
+    const myArr = [[1,2], [3,4], [5,6]];
+    const newArr = myArr.flat(); // newArr = [1, 2, 3, 4, 5, 6]
+
+    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const citrus1 = fruits.slice(2, 3));
+    // citrus1 = ["Lemon", "Apple"];
+    const citrus2 = fruits.slice(2);
+    // citrus2 = ["Lemon", "Apple", "Mango"];
+    </code>    
+    </pre>    
+    </div>
+    <br>
+    <a href="https://www.w3schools.com/js/js_array_methods.asp">Read More</a>
+
+    <br><br>
+    <p>---</p>
+    <h1>Array Search</h1>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    // Syntax
+    array.indexOf(item, start);
+    
+    array.lastIndexOf(item, start);
+
+    array.includes(search-item); // Return true or false
+    </code>    
+    </pre>    
+    </div>
+    <a href="https://www.w3schools.com/js/js_array_search.asp">Read More</a>
+
+    <br><br>
+    <p>---</p>
+    <h1>Array Sort</h1>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    // Syntax
+    array.sort();
+    
+    array.reverse();
+    
+    array.toSorted(); // sort and create a new Array
+
+    array.toReversed();
+
+    // The Compare Function
+    function(a, b) {return a - b}
+
+    // Numeric Sort
+    const points = [40, 100, 5, 20, 99];
+    points.sort(function(a,b){return a - b});
+
+    // Sorting an Array in Random Order
+    points.sort(function(){return 0.5 - Math.random()});
+
+    // The Fisher Yates Shuffle : Sorting an Array in Random Order (2)
+    for (let i = points.length -1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i+1));
+        let k = points[i];
+        points[i] = points[j];
+        points[j] = k;
+    }
+    </code>    
+    </pre>    
+    </div>
+    
+    <a href="https://www.w3schools.com/js/js_array_sort.asp">Read More</a>
+
+    <br><br>
+    <p>---</p>
+    <h1>Array Iteration</h1>
+    <div class="rounded-box">
+    <h3 style="color: white;"></h3>
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    // forEach() : calls a function once for each array element
+    const numbers = [40, 10, 20];
+    let txt = "";
+    numbers.forEach(myFunc);
+
+    function myFunc(value, index, array) {
+        txt += value + "&lt;br&gt;";
+    }
+
+    // map() : creates a new array by performing a function on each array element
+    const num1 = [40, 10, 20];
+    const num2 = num1.map(myFunc);
+
+    function myFunc(value, index, array){
+        return value * 2;
+    }
+    
+    // flatMap() : first maps all elements of an array and then creates a new array by 
+    // flattening the array
+    const myArr = [1, 2, 3, 4, 5];
+    const newArr = myArr.flatMap((x) => x * 2);
+
+    // filter(): creates a new array with array elements that pass a test
+    const numbers = [10, 50, 29, 66];
+    const over18 = numbers.filter(myFunc);
+
+    function myFunc(value, index, array) {
+        return value > 18;
+    }
+
+    // reduce(): runs a function on each array element to produce (reduce it to) 
+    // a single element
+    const numbers = [10, 50, 29, 66];
+    let sum = numbers.reduce(myFunc);
+
+    function myFunc(total, value, index, array) {
+        return total + value;
+    } 
+
+    // every(): check if all array values pass a test
+    // some(): check if some array values pass a test
+
+    // ... Operator : expands an iterable (like an array) into more elements
+    const q1 = ["Jan", "Feb", "Mar"];
+    const q2 = ["Apr", "May", "Jun"];
+    const q3 = ["Jul", "Aug", "Sep"];
+    const q4 = ["Oct", "Nov", "May"];
+
+    const year = [...q1, ...q2, ...q3, ...q4];
+    // Returns year = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "May"];
+
+    </code>    
+    </pre>    
+    </div>
+    <a href="https://www.w3schools.com/js/js_array_iteration.asp">Read More</a>
+
+    <br><br>
+    <p>---</p>
+    <h1>Array Const (Optional)</h1>
+    <a href="https://www.w3schools.com/js/js_array_const.asp">Read More</a>
+    
+    <br><br>
+    <p>
+        <a href="10_number.html"><span class="left-aligned"> PREVIOUS </span></a>
+        <a href="12_mathRandomBooleanComparison.html" class="right-aligned"> NEXT</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>

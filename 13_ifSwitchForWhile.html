@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/style.css">  
+
+        <link rel="stylesheet" href="css/prism.css" />  
+        <script src="js/script/prism.js"></script>
+    </header>
+
+    <body class="container">
+    <h1>If Else</h1>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    // if , else
+    let hour = 21;
+    if (hour < 10) {
+        greeting = "Good morning";
+    } else if (hour < 20) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good Evening"
+    }
+    </code>
+    </pre>
+    </div>
+
+    <h1>Switch</h1>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    let day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+        defualt:
+            return "Not the weekdays"
+
+    }
+    </code>
+    </pre>
+    </div>
+
+    <br>
+    <hr>
+    <h3>The <b>break</b> keyword</h3>
+    <p>
+        When JS reaches a <span class="important">break</span> keyword, it breaks out of switch block.
+    </p>
+    <h1>Loop For</h1>
+    <p style="background-color: orange; padding: 30px;">
+        Loop can execute a block of code a number of times.
+    </p>
+    <hr>
+    <h3>Different Kinds of Loops</h3>
+    <ul>
+        <li><span class="important">for</span> - loops through a block of code a number of times</li>
+        <li><span class="important">for/in</span> - loops through the properties of an object</li>
+        <li><span class="important">for/of</span> - loops through the values of an iterable object</li>
+        <li><span class="important">while</span> - loops through a block of code while a specified condition is true</li>
+        <li><span class="important">do/while</span> - also loops through a block of code while a specified condition is true</li>
+    </ul>
+    <p style="background-color: orange; padding: 30px;">
+        for (expression 1; expression 2; expression 3) {
+            // code block to be executed
+        }
+    </p>
+    <ul>
+        <li><b>Expression 1</b> is executed (one time) before the execution of the code block</li>
+        <li><b>Expression 2</b> defined the condition  for executing code block</li>
+        <li><b>Expression 3</b> is executed (every time) after the code block has been executed</li>
+    </ul>
+
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    for (let i = 0; i < 5; i++) {
+        text += "The number is" + i + "&lt;br&gt;";
+    }
+    </code>
+    </pre>
+    </div>
+    
+    <br>
+    <h1>Loop for in / for of</h1>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    // for in
+    const object = {fname:"John", lname:"Doe", age:25}; // object = {key:value}
+
+    let text = "";
+    for (let key in object ) {
+        text += person[key];
+    }
+
+    cosnt array = ["Nikola", "Tesla", "Albert", "Einstein"];
+    for (let index in array) {
+        text += array[index];
+    }
+
+    // forEach() 
+    cosnt array = ["Nikola", "Tesla", "Albert", "Einstein"];
+
+    let txt = "";
+    array.forEach(myFunc);
+
+    function myFunc(value, index, array) {
+        txt += value;
+    }
+
+    // for of
+    const array = ["BMW", "Volvo", "Lexus"];
+
+    let text = "";
+    for (let value of array) {
+        text += value;
+    }
+
+    // looping over a string
+    let string = "JavaScript";
+
+    let txt = "";
+    for (let character of string) {
+        txt += character;
+    }
+
+    </code>
+    </pre>
+    </div>
+    <hr>
+
+    <br>
+    <h1>Loop While and Break</h1>
+    <div class="rounded-box">
+    <pre style="background-color: white;">
+    <code class="language-javascript">
+    // SYNTAX
+    while (condition) {
+        // code block to be executed
+    }
+
+    do {
+        // code block to be executed
+    }
+    while (condition);
+
+    // the break statement is used to jump out of a loop or switch() statement
+    for (let i = 0; i < 10; i++) {
+        if (i==3) {break; }
+        text = "The number is" + i + "&lt;br&gt;";
+    }
+
+    // The continue statement breaks one iteration (in the loop), if
+    // a specified condition occurs, and continues with the next iterartion in the loop
+    for (let i = 0; i < 10; i++) {
+        if (i == 3) { continue; }
+        text = "The number is" + i + "&lt;br&gt;";
+    }
+    </code>
+    </pre>
+    </div>
+    
+    <br>
+    <a href="https://www.w3schools.com/js/js_if_else.asp">Read More</a>
+
+    <br><br>
+    <p>
+        <a href="12_mathRandomBooleanComparison.html"><span class="left-aligned"> PREVIOUS </span></a>
+        <a href="14_setMap.html" class="right-aligned"> NEXT</a>
+    </p>
+    <footer id="main-footer">
+        <p>Copyright &copy; 2024 Vimeanseth THORNG</p>
+    </footer>
+    <div style="margin-bottom: 30px ;"></div>
+    </body>
+</html>
